@@ -9,10 +9,10 @@ function onOpen() {
 
 function createNewGoogleDocs_UA() {
   //This value should be the id of your document template that we created in the last step
-  const googleDocTemplate = DriveApp.getFileById('1A2d9UeqatTw_wvgC7P-Cw4Fq5grSZq_MRDqKdMpWSqE');
+  const googleDocTemplate = DriveApp.getFileById('link-do-templatki');
   
   //This value should be the id of the folder where you want your completed documents stored
-  const destinationFolder = DriveApp.getFolderById('17KIOypcT8ktErRoZonrg_w4CYdrBWsjP')
+  const destinationFolder = DriveApp.getFolderById('link-do-folderu')
   //Here we store the sheet as a variable
   const sheet = SpreadsheetApp
     .getActiveSpreadsheet()
@@ -89,17 +89,14 @@ function createNewGoogleDocs_UA() {
   
 }
 
-  //doc id              1A2d9UeqatTw_wvgC7P-Cw4Fq5grSZq_MRDqKdMpWSqE
-  //temp folder         1vLIiIP-TM_BZCwykf_YvEFwFl5-ab-VC
-  //pdf folder          17KIOypcT8ktErRoZonrg_w4CYdrBWsjP
 
   //-----
 function createNewGoogleDocs_PL() {
   //This value should be the id of your document template that we created in the last step
-  const googleDocTemplate = DriveApp.getFileById('1YBgb6FTecJfcHC1gq9z4uCs5qQP1Rig8pQlyKokdOmM');
+  const googleDocTemplate = DriveApp.getFileById('link-do-templatki');
   
   //This value should be the id of the folder where you want your completed documents stored
-  const destinationFolder = DriveApp.getFolderById('17KIOypcT8ktErRoZonrg_w4CYdrBWsjP')
+  const destinationFolder = DriveApp.getFolderById('link-do-folderu')
   //Here we store the sheet as a variable
   const sheet = SpreadsheetApp
     .getActiveSpreadsheet()
@@ -176,17 +173,14 @@ function createNewGoogleDocs_PL() {
   
 }
 
-  //doc id              1FxdvXH89E27_8vfr4UoeSQNzbP6kMiaZf4ODllOo4FM
-  //temp folder         1vLIiIP-TM_BZCwykf_YvEFwFl5-ab-VC
-  //pdf folder          17KIOypcT8ktErRoZonrg_w4CYdrBWsjP
 
 
   function createNewGoogleDocs_dorosly() {
   //This value should be the id of your document template that we created in the last step
-  const googleDocTemplate = DriveApp.getFileById('1FxdvXH89E27_8vfr4UoeSQNzbP6kMiaZf4ODllOo4FM');
+  const googleDocTemplate = DriveApp.getFileById('link-do-templatki');
   
   //This value should be the id of the folder where you want your completed documents stored
-  const destinationFolder = DriveApp.getFolderById('17KIOypcT8ktErRoZonrg_w4CYdrBWsjP')
+  const destinationFolder = DriveApp.getFolderById('link-do-folderu')
   //Here we store the sheet as a variable
   const sheet = SpreadsheetApp
     .getActiveSpreadsheet()
@@ -271,7 +265,3 @@ function createNewGoogleDocs_PL() {
   })
   
 }
-
-  //doc id              1YBgb6FTecJfcHC1gq9z4uCs5qQP1Rig8pQlyKokdOmM
-  //temp folder         1vLIiIP-TM_BZCwykf_YvEFwFl5-ab-VC
-  //pdf folder          17KIOypcT8ktErRoZonrg_w4CYdrBWsjP
