@@ -1,0 +1,53 @@
+function autoFillGoogleDocFromForm(e) {
+  //e.values is an array of form values
+  var timestamp = e.values[0];
+  var firstName = e.values[1];
+  var lastName = e.values[2];
+  var title1 = e.values[3];
+  var title2 = e.values[4];
+  var title3 = e.values[5];
+  var title4 = e.values[6];
+  var title5 = e.values[9];
+  var title6 = e.values[8];
+  var title7 = e.values[9];
+  var title8 = e.values[10];
+  var title9 = e.values[11];
+  var title10 = e.values[12];
+  var title11 = e.values[13];
+  var ss = SpreadsheetApp.getActive();
+var sheet = ss.getSheetByName('Form'); 
+var headers = sheet.getRange(1,1,1,sheet.getLastColumn()).getValues();
+  
+  //file is the template file, and you get it by ID
+  var file = DriveApp.getFileById('ID_pliku'); 
+  
+  //We can make a copy of the template, name it, and optionally tell it what folder to live in
+  //file.makeCopy will return a Google Drive file object
+  var folderS = DriveApp.getFolderById('ID_folderu')
+  var copy = file.makeCopy(lastName + ',' + firstName, folderS); 
+  
+  //Once we've got the new file created, we need to open it as a document by using its ID
+  var doc = DocumentApp.openById(copy.getId()); 
+  
+  //Since everything we need to change is in the body, we need to get that
+  var body = doc.getBody(); 
+  
+  //Then we call all of our replaceText methods
+  body.replaceText('{{first}}', firstName); 
+  body.replaceText('{{last}}', lastName);  
+  body.replaceText('{{date}}', title1); 
+  body.replaceText('{{gender}}', title2); 
+  body.replaceText('{{refugee}}', title3);  
+  body.replaceText('{{op_first}}', title6); 
+  body.replaceText('{{op_last}}', title5); 
+  body.replaceText('{{op_adress}}', title4); 
+  //body.replaceText('{{op_first}}', title7); 
+  body.replaceText('{{op_phone}}', title8); 
+  body.replaceText('{{op_mail}}', title9); 
+  body.replaceText('{{przyczyna_np}}', title10); 
+  body.replaceText('{{jakie_pz}}', title11); 
+  //Lastly we save and close the document to persist our changes
+  doc.saveAndClose(); 
+}
+//nalezy pamietac ze skrypt w edytorze pokaze blad przy kompilacji
+//ale działa po ustawieniu wyzwalacza w Google Apps Scripts
