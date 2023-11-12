@@ -7,10 +7,10 @@ function onOpen() {
 
 function createNewUop() {
   //This value should be the id of your document template that we created in the last step
-  const googleDocTemplate = DriveApp.getFileById('1jtyJBzc_rrKYO7hulQSR83siDgZTmYR7JBHFJXGjcZw');
+  const googleDocTemplate = DriveApp.getFileById('#');
   
   //This value should be the id of the folder where you want your completed documents stored
-  const destinationFolder = DriveApp.getFolderById('1osxJEiwd48FOwORJXQ5GvYrqTCHdvAkZ')
+  const destinationFolder = DriveApp.getFolderById('#')
   //Here we store the sheet as a variable
   const sheet = SpreadsheetApp
     .getActiveSpreadsheet()
